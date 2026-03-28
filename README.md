@@ -1,16 +1,84 @@
-# React + Vite
+# 🤖 Piyush Bhadade | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, high-performance, and fully responsive portfolio built for modern Android and Software Developers. This project showcases a blend of clean architecture, interactive UI, and profession-specific branding.
 
-Currently, two official plugins are available:
+🚀 **Live Site:** [https://creative-space-27.github.io/Portfolio/](https://creative-space-27.github.io/Portfolio/) (Or your deployment URL)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🟢 Android-Centric Branding
+- **Custom Identity**: Branded with an official Android robot logo, green gradients (`#3DDC84`), and custom favicons.
+- **Java Syntax Integration**: All code-based sections (About, Hero, Contact) use proper Java class structures and syntax.
+- **JVM Status Indicator**: A live "JVM: ACTIVE" status in the navigation bar for that technical touch.
 
-## Expanding the ESLint configuration
+### 📱 100% Mobile Responsive
+- **Fluid Layouts**: Built with a custom responsive utility system to ensure perfect stacking on all devices.
+- **Mobile Menu**: Smooth, Framer Motion-powered hamburger menu for seamless navigation on touch targets.
+- **Adaptive Grids**: Skills and Projects automatically adjust columns based on screen width.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🏆 Interactive Achievement Showcase
+- **Mobile Mockup**: A high-fidelity, interactive phone UI that acts as a scrollable menu for career milestones.
+- **Dynamic Detail Pane**: Smooth transitions using `AnimatePresence` to display detailed recognition when items are selected.
+
+### ✉️ Optimized Outreach
+- **Direct Mailto**: Integrated professional mailto links for immediate connectivity.
+- **Clipboard API**: Robust "Copy Email" functionality with successful toast notifications.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js, Vite
+- **Styling:** Tailwind CSS (v4), Vanilla CSS
+- **Animations:** Framer Motion
+- **Icons:** Lucide-React
+- **Branding:** Custom SVG Logos
+
+---
+
+## 📦 Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v16+)
+- [npm](https://www.npmjs.com/)
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/CreativeSpace27/Portfolio.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 🏗️ Project Structure
+
+```text
+src/
+├── assets/          # Static images & icons
+├── Portfolio.jsx    # Main core logic & sections
+├── App.jsx          # Component wrapper
+├── main.jsx         # Entry point
+└── index.css        # Tailwind v4 & Global styles
+public/              # Favicon & assets
+```
+
+---
+
+## 🤝 Connect With Me
+
+- **LinkedIn:** [@Piyush Bhadade](https://www.linkedin.com/in/piyush-bhadade-18718623b/)
+- **GitHub:** [@CreativeSpace27](https://github.com/CreativeSpace27)
+- **Email:** [piyushbhadade27@gmail.com](mailto:piyushbhadade27@gmail.com)
+
+---
+*Created with ❤️ by Piyush Bhadade*
