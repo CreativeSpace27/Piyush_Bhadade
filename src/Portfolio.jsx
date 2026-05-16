@@ -86,17 +86,19 @@ export default function Portfolio() {
 
   const skills = [
     { icon: '☕', title: 'Java Development', desc: 'Building solid backend systems and enterprise applications', gradient: 'from-amber-500/20 to-orange-500/20', border: 'border-amber-500/30', glow: 'hover:shadow-amber-500/20', code: 'SpringBoot.run()' },
-    { icon: '🤖', title: 'Android Development', desc: 'Creating apps people actually enjoy using, with Kotlin & modern tools', gradient: 'from-emerald-500/20 to-green-500/20', border: 'border-emerald-500/30', glow: 'hover:shadow-emerald-500/20', code: 'startActivity()' },
+    { icon: '📱', title: 'Android Development', desc: 'Creating apps people actually enjoy using, with Kotlin & modern tools', gradient: 'from-emerald-500/20 to-green-500/20', border: 'border-emerald-500/30', glow: 'hover:shadow-emerald-500/20', code: 'startActivity()' },
     { icon: '🌐', title: 'Web Development', desc: 'Full-stack web apps with React, Node.js and everything in between', gradient: 'from-blue-500/20 to-cyan-500/20', border: 'border-blue-500/30', glow: 'hover:shadow-blue-500/20', code: 'React.render()' },
     { icon: '🏗️', title: 'System Design', desc: 'Architecting systems that scale and actually work in production', gradient: 'from-violet-500/20 to-purple-500/20', border: 'border-violet-500/30', glow: 'hover:shadow-violet-500/20', code: 'Microservices.scale()' },
     { icon: '🎨', title: 'UI/UX Design', desc: 'Making interfaces intuitive and pleasant to use', gradient: 'from-pink-500/20 to-rose-500/20', border: 'border-pink-500/30', glow: 'hover:shadow-pink-500/20', code: 'MaterialDesign.apply()' },
+    { icon: '🤖', title: 'Applied NLP/ AI', desc: 'Designing multi-model backend engines that synthesize fragmented data into cohesive, intelligent responses', gradient: 'from-pink-500/20 to-rose-500/20', border: 'border-pink-500/30', glow: 'hover:shadow-pink-500/20', code: 'AgenticWorkflow.execute()' },
+
   ];
 
   const projects = [
-    { title: 'LinkUp (Parental Control)', desc: 'Real-time parental control platform with "Backend as the Law" architecture. Features dual-app sync via FCM and resilient app-blocking overlays.', tech: ['Android (Java)', 'Node.js', 'PostgreSQL', 'FCM'], gradient: 'from-orange-600 to-red-500', emoji: '🛡️', link: 'https://github.com/CreativeSpace27/Parental_Control.git' },
+    { title: 'LinkUp (Parental Control)', desc: 'Real-time parental control platform with "Backend as the Law" architecture. Features dual-app sync via FCM and resilient app-blocking overlays.', tech: ['Android (Java)', 'Supabase', 'PostgreSQL', 'FCM'], gradient: 'from-orange-600 to-red-500', emoji: '🛡️', link: 'https://github.com/CreativeSpace27/Parental_Control.git' },
     { title: 'ASHA-EHR Backend', desc: 'Rural healthcare data system digitizing rural data collection in India. Features offline-first sync engine and strict hierarchical RBAC.', tech: ['Node.js', 'TypeScript', 'Express.js', 'PostgreSQL'], gradient: 'from-violet-600 to-fuchsia-500', emoji: '🏥', link: 'https://github.com/Tracebycode/Asha-Ehr-Backend-.git' },
-    { title: 'Problem Sphere', desc: 'Collaborative platform for sharing and solving real-world technical problems. Connects industry challenges with global innovators.', tech: ['Next.js', 'JavaScript', 'Firebase', 'API'], gradient: 'from-blue-600 to-indigo-500', emoji: '💡', link: 'https://github.com/CreativeSpace27/Problem_Sphere.git' },
-    { title: 'College Campus', desc: 'Integrated management app for libraries, hostels, and departments. Streamlines admissions and student-staff coordination.', tech: ['Android', 'Java', 'XML', 'Firebase'], gradient: 'from-emerald-600 to-teal-500', emoji: '🏫', link: 'https://github.com/CreativeSpace27/College-Campus.git' },
+    { title: 'Problem Sphere (WIP)', desc: 'Collaborative platform for sharing and solving real-world technical problems. Connects industry challenges with global innovators.', tech: ['Next.js', 'JavaScript', 'Firebase', 'API'], gradient: 'from-blue-600 to-indigo-500', emoji: '💡', link: 'https://github.com/CreativeSpace27/Problem_Sphere.git' },
+    { title: 'DriveChat', desc: 'AI-powered conversational agent that lets you interact directly with your Google Drive using natural language. It instantly navigates complex folders, performs deep searches inside your documents, and retrieves direct file links—turning your cloud storage into an easily accessible.', tech: ['Groq','LangChain', 'FastAPI', 'Python', 'Streamlit', 'Google Drive API'], gradient: 'from-emerald-600 to-teal-500', emoji: '🗂️', link: 'https://github.com/CreativeSpace27/DriveChat.git' },
   ];
 
   const achievements = [
