@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { fetchLeetCodeStats } from "./stats/leetcode";
+import { fetchCodeChefStats } from "./stats/codechef";
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Code, Mail, ExternalLink, Coffee, Heart, Terminal, Play, Package, ChevronDown, ArrowRight, Sun, Moon, Copy, CheckCircle, Menu, X } from 'lucide-react';
 
@@ -37,6 +39,8 @@ export default function Portfolio() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [showCopyToast, setShowCopyToast] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [leetcodeSolved, setLeetcodeSolved] = useState(0);
+  const [codechefSolved, setCodechefSolved] = useState(0);
   const { scrollYProgress } = useScroll();
   const scaleX = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const bounceY = useTransform(scrollYProgress, [0, 1], [0, -100]);
@@ -82,6 +86,18 @@ export default function Portfolio() {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+  const loadStats = async () => {
+    const leet = await fetchLeetCodeStats();
+    const codechef = await fetchCodeChefStats();
+
+    setLeetcodeSolved(leet);
+    setCodechefSolved(codechef);
+    };
+
+    loadStats();
   }, []);
 
   const skills = [
@@ -814,11 +830,137 @@ export default function Portfolio() {
             <p className="mono" style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 60 }}>
               const milestones = getAchievements()
             </p>
+            <div
+  style={{
+    display: "flex",
+    gap: "24px",
+    flexWrap: "wrap",
+    marginBottom: "20px",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  <motion.a
+    href="https://leetcode.com/u/piiyush_bhadade/"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ y: -5 }}
+    className="card"
+    style={{
+      padding: "24px 30px",
+      minWidth: "240px",
+      textDecoration: "none",
+      color: "inherit",
+    }}
+  >
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginBottom: "10px",
+      }}
+    >
+      <h3
+        style={{
+          fontSize: "20px",
+          fontWeight: "700",
+        }}
+      >
+        🟠 LeetCode
+      </h3>
+
+      <ExternalLink size={18} color="#f97316" />
+    </div>
+
+    <p
+      className="mono"
+      style={{
+        color: "#f97316",
+        fontSize: "34px",
+        fontWeight: "700",
+      }}
+    >
+      {leetcodeSolved}+
+    </p>
+
+    <p
+      style={{
+        color: "var(--text-muted)",
+        fontSize: "14px",
+        marginTop: "5px",
+      }}
+    >
+      Problems Solved
+    </p>
+  </motion.a>
+
+  <motion.a
+    href="https://www.codechef.com/users/piyush_bhadade"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ y: -5 }}
+    className="card"
+    style={{
+      padding: "24px 30px",
+      minWidth: "240px",
+      textDecoration: "none",
+      color: "inherit",
+    }}
+  >
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginBottom: "10px",
+      }}
+    >
+      <h3
+        style={{
+          fontSize: "20px",
+          fontWeight: "700",
+        }}
+      >
+        🟤 CodeChef
+      </h3>
+
+      <ExternalLink size={18} color="#a855f7" />
+    </div>
+
+    <p
+      className="mono"
+      style={{
+        color: "#a855f7",
+        fontSize: "34px",
+        fontWeight: "700",
+      }}
+    >
+      {codechefSolved}+
+    </p>
+
+    <p
+      style={{
+        color: "var(--text-muted)",
+        fontSize: "14px",
+        marginTop: "5px",
+      }}
+    >
+      Problems Solved
+    </p>
+  </motion.a>
+</div>
           </FadeInSection>
 
-          <div className="responsive-grid-2" style={{ gap: 60 }}>
+            <div
+              className="responsive-grid-2"
+              style={{
+                gap: 60,
+                alignItems: "start",
+              }}
+            >
             <FadeInSection delay={0.1}>
-              <div className="phone-frame" style={{ margin: '0 auto' }}>
+              <div className="phone-frame" style={{ margin: '40px auto 0 auto' }}>
                 <div className="phone-notch" />
                 <div className="phone-screen">
                   <div className="phone-navbar">
